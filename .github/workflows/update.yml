@@ -1,0 +1,135 @@
+name: Update APT Repository
+
+on:
+  repository_dispatch:
+    types: [crw-release]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version (e.g. 0.3.2)"
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Determine version
+        id: version
+        run: |
+          if [ -n "${{ github.event.client_payload.version }}" ]; then
+            echo "version=${{ github.event.client_payload.version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${{ github.event.inputs.version }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download Linux release assets
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          mkdir -p /tmp/assets
+          for bin in crw crw-server crw-mcp; do
+            for arch in x64 arm64; do
+              echo "Downloading ${bin}-linux-${arch}.tar.gz..."
+              gh release download "v${VERSION}" --repo us/crw \
+                -D /tmp/assets -p "${bin}-linux-${arch}.tar.gz" --clobber
+            done
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build .deb packages
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+
+          build_deb() {
+            local bin="$1" arch_label="$2" deb_arch="$3" desc="$4"
+            local pkg_dir="/tmp/deb/${bin}_${VERSION}_${deb_arch}"
+
+            mkdir -p "${pkg_dir}/DEBIAN" "${pkg_dir}/usr/bin"
+
+            tar xzf "/tmp/assets/${bin}-linux-${arch_label}.tar.gz" -C "${pkg_dir}/usr/bin/"
+            chmod 755 "${pkg_dir}/usr/bin/${bin}"
+
+            cat > "${pkg_dir}/DEBIAN/control" <<EOF
+          Package: ${bin}
+          Version: ${VERSION}
+          Section: web
+          Priority: optional
+          Architecture: ${deb_arch}
+          Maintainer: CRW <crw@fastcrw.com>
+          Homepage: https://github.com/us/crw
+          Description: ${desc}
+          EOF
+
+            dpkg-deb --build "${pkg_dir}" "pool/${bin}_${VERSION}_${deb_arch}.deb"
+          }
+
+          mkdir -p pool
+
+          for arch_label in x64 arm64; do
+            if [ "$arch_label" = "x64" ]; then deb_arch="amd64"; else deb_arch="arm64"; fi
+
+            build_deb crw "$arch_label" "$deb_arch" \
+              "Fast web scraper CLI for AI agents. Markdown output, zero config."
+            build_deb crw-server "$arch_label" "$deb_arch" \
+              "Firecrawl-compatible web scraper API server."
+            build_deb crw-mcp "$arch_label" "$deb_arch" \
+              "MCP server for web scraping — works with Claude, Cursor, etc."
+          done
+
+      - name: Generate APT metadata
+        run: |
+          mkdir -p dists/stable/main/binary-amd64 dists/stable/main/binary-arm64
+
+          for arch in amd64 arm64; do
+            dpkg-scanpackages --arch "$arch" pool > "dists/stable/main/binary-${arch}/Packages"
+            gzip -k "dists/stable/main/binary-${arch}/Packages"
+          done
+
+          cat > dists/stable/Release <<EOF
+          Origin: CRW
+          Label: CRW
+          Suite: stable
+          Codename: stable
+          Architectures: amd64 arm64
+          Components: main
+          Description: CRW - Web scraper built for AI agents
+          EOF
+
+          cd dists/stable
+          {
+            echo "SHA256:"
+            for f in main/binary-*/Packages main/binary-*/Packages.gz; do
+              size=$(wc -c < "$f")
+              sha=$(sha256sum "$f" | cut -d' ' -f1)
+              printf " %s %s %s\n" "$sha" "$size" "$f"
+            done
+          } >> Release
+
+      - name: Import GPG key and sign
+        run: |
+          echo "${{ secrets.APT_GPG_PRIVATE_KEY }}" | gpg --batch --import
+          gpg --batch --yes --pinentry-mode loopback \
+            --passphrase "${{ secrets.APT_GPG_PASSPHRASE }}" \
+            -abs -o dists/stable/Release.gpg \
+            dists/stable/Release
+          gpg --batch --yes --pinentry-mode loopback \
+            --passphrase "${{ secrets.APT_GPG_PASSPHRASE }}" \
+            --clearsign -o dists/stable/InRelease \
+            dists/stable/Release
+          gpg --batch --export --armor > gpg.key
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pool/ dists/ gpg.key
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "chore: update packages to v${{ steps.version.outputs.version }}"
+          git push
