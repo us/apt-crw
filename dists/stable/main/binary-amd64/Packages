@@ -1,0 +1,45 @@
+Package: crw
+Version: 0.3.2
+Architecture: amd64
+Maintainer: CRW <crw@fastcrw.com>
+Installed-Size: 14468
+Filename: pool/crw_0.3.2_amd64.deb
+Size: 4731764
+MD5sum: e9a105a47b0eeb433fb01ed6bd4b3b9f
+SHA1: e95dd31324983aa7868274f9e8220cf656eeb033
+SHA256: 493259e42b2951e7ae125f73dbf9da3172a7ced0d474c8db3e4136b9cfef1db4
+Section: web
+Priority: optional
+Homepage: https://github.com/us/crw
+Description: Fast web scraper CLI for AI agents. Markdown output, zero config.
+
+Package: crw-mcp
+Version: 0.3.2
+Architecture: amd64
+Maintainer: CRW <crw@fastcrw.com>
+Installed-Size: 16500
+Filename: pool/crw-mcp_0.3.2_amd64.deb
+Size: 5361270
+MD5sum: ed51e3063e0b090270523063f4a7fddf
+SHA1: 0184940b5dfca821527d0530ff147cc23d179b13
+SHA256: 6e79f675fdbaf9b935192751503d67fe5a593a17c9480b8fab4dd958a4ba618b
+Section: web
+Priority: optional
+Homepage: https://github.com/us/crw
+Description: MCP server for web scraping — works with Claude, Cursor, etc.
+
+Package: crw-server
+Version: 0.3.2
+Architecture: amd64
+Maintainer: CRW <crw@fastcrw.com>
+Installed-Size: 17056
+Filename: pool/crw-server_0.3.2_amd64.deb
+Size: 5540774
+MD5sum: 88230f5c6959eadae5af058f3d139ac2
+SHA1: da18297bb675ff5f43ddcb0e9aa3d0d6d13c51f9
+SHA256: a40bc55623896bccca802c2ae77f8ca0e591db442cfb9c4bffe7f51a328ad5e2
+Section: web
+Priority: optional
+Homepage: https://github.com/us/crw
+Description: Firecrawl-compatible web scraper API server.
+

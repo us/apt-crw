@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: CRW
+Label: CRW
+Suite: stable
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+Description: CRW - Web scraper built for AI agents
+Date: Wed, 08 Apr 2026 16:56:55 +0000
+SHA256:
+ f173f7058c2b7e83737234d64c5290aa9e26c43f162fd13c9d2bb3d354ef3792     1385 main/binary-amd64/Packages
+ 6bc78d52dc0e4c3e196505a456dc9b25c66f2b5ef21e1fbff3198810585e73a6     1385 main/binary-arm64/Packages
+ a112535006d9ddc4ade2cfd3efe44a89606fd29817ece999f29a00179c808168      676 main/binary-amd64/Packages.gz
+ c98846c28b40362313e3f27d59b9763d476eb738f1f52ee683417858b95382c5      677 main/binary-arm64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEMPG2F/LEdGDO66zdnEx1XZjB26sFAmnWiNcACgkQnEx1XZjB
+26sEHA//ePaP/Ko7Gsh7NfiR9c/OphvSL/v8ooA37IdckppTEW1B3++WA2CjOIpk
+txscDqcKurWo0Lt4KnwgCnfQtb3fr3aNyklp5dN6njG2Fhs9EKpstDErWxI5sd6M
+F3tFbdTEdJagdznNMjMrS1/JOLBkZKG24+lmHyS5ktkzjF/274hRy4qk/m22cSas
+badCI2xBwIW3ubLWPNsTVl91p30WY7GTD5udxsB26iPRRz+w4hc41cEfLX9Rng/z
+pW8NJ0qKCOACVozr/F5yrnOQEccj3PLc6egIObhTgP2RFRUYoEOr9acFKOltLVha
+EoGxD6cs9oLTQ/dd5mA03x0K6uiR+6dp5ifd2mjn6SUSxnD4/AzrdNqX/ayMQrsw
+TQnjlbCgxAtfXbNwxGIEbpyD8Q4n60WlcvX4De2aWPGd0wFqD/JTxXSYap2NOh50
+mkPieM0IEyewdFvPllalF5YbOkIkGIO+qICcVFyCHqGfvSHfaQWVRcezl3QXFe+o
+DaeUabLAUG5cZcQHTV58wz1qxZahYwxglex4Xu3Vz+t6uhGRwE26jEKNPIDXc6om
+w3hMEdZG/VZB41hAbnOpQB2UTT6R9afOz7v3iUP1oEg2IHbm/gIq42OXrPowNOa/
+3HfPEP+ZYLOPYi5AKLb+mz2iymg+4o5R1W+E1ImAGD8OrzmF48E=
+=tbsR
+-----END PGP SIGNATURE-----

@@ -1,0 +1,13 @@
+Origin: CRW
+Label: CRW
+Suite: stable
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+Description: CRW - Web scraper built for AI agents
+Date: Wed, 08 Apr 2026 16:56:55 +0000
+SHA256:
+ f173f7058c2b7e83737234d64c5290aa9e26c43f162fd13c9d2bb3d354ef3792     1385 main/binary-amd64/Packages
+ 6bc78d52dc0e4c3e196505a456dc9b25c66f2b5ef21e1fbff3198810585e73a6     1385 main/binary-arm64/Packages
+ a112535006d9ddc4ade2cfd3efe44a89606fd29817ece999f29a00179c808168      676 main/binary-amd64/Packages.gz
+ c98846c28b40362313e3f27d59b9763d476eb738f1f52ee683417858b95382c5      677 main/binary-arm64/Packages.gz
