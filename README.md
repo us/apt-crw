@@ -6,10 +6,10 @@ Debian/Ubuntu package repository for [CRW](https://github.com/us/crw) — the we
 
 ```bash
 # Add GPG key
-curl -fsSL https://us.github.io/apt-crw/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/crw.gpg
+curl -fsSL https://usxperiments.com/apt-crw/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/crw.gpg
 
 # Add repository
-echo "deb [signed-by=/usr/share/keyrings/crw.gpg] https://us.github.io/apt-crw stable main" | sudo tee /etc/apt/sources.list.d/crw.list
+echo "deb [signed-by=/usr/share/keyrings/crw.gpg] https://usxperiments.com/apt-crw stable main" | sudo tee /etc/apt/sources.list.d/crw.list
 
 # Install
 sudo apt update
