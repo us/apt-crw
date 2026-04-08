@@ -11,8 +11,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   update:
@@ -28,6 +26,9 @@ jobs:
           else
             echo "version=${{ github.event.inputs.version }}" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Install packaging tools
+        run: sudo apt-get update && sudo apt-get install -y dpkg-dev
 
       - name: Download Linux release assets
         run: |
@@ -46,6 +47,7 @@ jobs:
       - name: Build .deb packages
         run: |
           VERSION="${{ steps.version.outputs.version }}"
+          mkdir -p pool
 
           build_deb() {
             local bin="$1" arch_label="$2" deb_arch="$3" desc="$4"
@@ -56,21 +58,23 @@ jobs:
             tar xzf "/tmp/assets/${bin}-linux-${arch_label}.tar.gz" -C "${pkg_dir}/usr/bin/"
             chmod 755 "${pkg_dir}/usr/bin/${bin}"
 
-            cat > "${pkg_dir}/DEBIAN/control" <<EOF
+            cat > "${pkg_dir}/DEBIAN/control" <<CTRL
           Package: ${bin}
           Version: ${VERSION}
           Section: web
           Priority: optional
           Architecture: ${deb_arch}
+          Installed-Size: $(du -sk "${pkg_dir}/usr/bin/${bin}" | cut -f1)
           Maintainer: CRW <crw@fastcrw.com>
           Homepage: https://github.com/us/crw
           Description: ${desc}
-          EOF
+          CTRL
 
-            dpkg-deb --build "${pkg_dir}" "pool/${bin}_${VERSION}_${deb_arch}.deb"
+            # Strip leading whitespace from control file (YAML indentation artifact)
+            sed -i 's/^[[:space:]]*//' "${pkg_dir}/DEBIAN/control"
+
+            dpkg-deb --build --root-owner-group "${pkg_dir}" "pool/${bin}_${VERSION}_${deb_arch}.deb"
           }
-
-          mkdir -p pool
 
           for arch_label in x64 arm64; do
             if [ "$arch_label" = "x64" ]; then deb_arch="amd64"; else deb_arch="arm64"; fi
@@ -92,7 +96,8 @@ jobs:
             gzip -k "dists/stable/main/binary-${arch}/Packages"
           done
 
-          cat > dists/stable/Release <<EOF
+          # Generate Release file (no leading whitespace!)
+          cat > dists/stable/Release <<'RELEASE'
           Origin: CRW
           Label: CRW
           Suite: stable
@@ -100,15 +105,18 @@ jobs:
           Architectures: amd64 arm64
           Components: main
           Description: CRW - Web scraper built for AI agents
-          EOF
+          RELEASE
+          sed -i 's/^[[:space:]]*//' dists/stable/Release
 
+          # Append Date and checksums
+          echo "Date: $(date -Ru)" >> dists/stable/Release
           cd dists/stable
           {
             echo "SHA256:"
             for f in main/binary-*/Packages main/binary-*/Packages.gz; do
-              size=$(wc -c < "$f")
               sha=$(sha256sum "$f" | cut -d' ' -f1)
-              printf " %s %s %s\n" "$sha" "$size" "$f"
+              size=$(stat -c%s "$f")
+              printf " %s %8d %s\n" "$sha" "$size" "$f"
             done
           } >> Release
 
