@@ -93,7 +93,11 @@ jobs:
 
           for arch in amd64 arm64; do
             dpkg-scanpackages --arch "$arch" pool > "dists/stable/main/binary-${arch}/Packages"
-            gzip -k "dists/stable/main/binary-${arch}/Packages"
+            # -f: the previous Packages.gz is committed in the repo, so without
+            # force gzip refuses to overwrite it ("already exists; not
+            # overwritten") and exits non-zero — which silently broke every APT
+            # update since the first release.
+            gzip -kf "dists/stable/main/binary-${arch}/Packages"
           done
 
           # Generate Release file (no leading whitespace!)
