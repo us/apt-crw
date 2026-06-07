@@ -5,9 +5,9 @@ Codename: stable
 Architectures: amd64 arm64
 Components: main
 Description: CRW - Web scraper built for AI agents
-Date: Wed, 08 Apr 2026 16:56:55 +0000
+Date: Sun, 07 Jun 2026 23:10:03 +0000
 SHA256:
- f173f7058c2b7e83737234d64c5290aa9e26c43f162fd13c9d2bb3d354ef3792     1385 main/binary-amd64/Packages
- 6bc78d52dc0e4c3e196505a456dc9b25c66f2b5ef21e1fbff3198810585e73a6     1385 main/binary-arm64/Packages
- a112535006d9ddc4ade2cfd3efe44a89606fd29817ece999f29a00179c808168      676 main/binary-amd64/Packages.gz
- c98846c28b40362313e3f27d59b9763d476eb738f1f52ee683417858b95382c5      677 main/binary-arm64/Packages.gz
+ b9440c58785e8f1d7f4771fc55e166c85233a4cefefc01e4827824c1838c3c95     1391 main/binary-amd64/Packages
+ 434eb95e07da28af721716d7d3feb6fdda245226a68ff5e85cc736de9eb26bfd     1391 main/binary-arm64/Packages
+ e7abf7d20282f98e804970aab9b5c3e7acc0bc5614c4dc7c1aa16be037e499a9      679 main/binary-amd64/Packages.gz
+ 97f1f06907c9e67102d410bea8c9c4f334ff48029acbaaee2287db10d510bf58      681 main/binary-arm64/Packages.gz
