@@ -5,13 +5,11 @@ Debian/Ubuntu package repository for [CRW](https://github.com/us/crw) — the we
 ## Usage
 
 ```bash
-# Add GPG key (fetched over HTTPS from GitHub — tamper-proof)
-curl -fsSL https://raw.githubusercontent.com/us/apt-crw/main/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/crw.gpg
+# Add GPG key
+curl -fsSL https://apt.fastcrw.com/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/crw.gpg
 
 # Add repository
-# Transport is plain HTTP by design: every package is GPG-signed and verified
-# via signed-by, so HTTP is the standard, secure way to serve an APT repo.
-echo "deb [signed-by=/usr/share/keyrings/crw.gpg] http://apt.fastcrw.com stable main" | sudo tee /etc/apt/sources.list.d/crw.list
+echo "deb [signed-by=/usr/share/keyrings/crw.gpg] https://apt.fastcrw.com stable main" | sudo tee /etc/apt/sources.list.d/crw.list
 
 # Install
 sudo apt update
