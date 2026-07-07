@@ -8,25 +8,25 @@ Codename: stable
 Architectures: amd64 arm64
 Components: main
 Description: CRW - Web scraper built for AI agents
-Date: Mon, 06 Jul 2026 21:06:50 +0000
+Date: Tue, 07 Jul 2026 12:41:18 +0000
 SHA256:
- fbbf3c09f6047b28fdafe3bd4d13524966b126d6bef9fe1b2db70f5fb5b3aa62     1391 main/binary-amd64/Packages
- 0dafed09ac9e1fb53c45e56ca85175fef4cab4f77e8888f6e875c25128502049     1391 main/binary-arm64/Packages
- 26229c5ac8d0f4e7ca8f18f26c6853f14cef3666ac9d4d3828b99c758eaeb87a      678 main/binary-amd64/Packages.gz
- d7d4db5127ba2bf7f095c5d11c9ab206b7365f0fa4d5396334e6f07cf42f36d2      682 main/binary-arm64/Packages.gz
+ d0799a1bb5a1a041c8d578f341a2a1d7cf5f2a6e9683cf9f5ac747dd392ba9a0     1391 main/binary-amd64/Packages
+ 0b7a15b34a48d8c19367fd24f8f552ba90dd5c8a4a27763cf11fdd1c8f4e6336     1391 main/binary-arm64/Packages
+ e019fdd67b13d09de841e63dc73af75a14cf970e642dbfaf02c3160de07c980a      680 main/binary-amd64/Packages.gz
+ a72d1a325a38522bff49cf264d0d5be7c6d7457fd3fec34c1388a96028f76978      681 main/binary-arm64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEMPG2F/LEdGDO66zdnEx1XZjB26sFAmpMGOoACgkQnEx1XZjB
-26tuLA//blGVx63x23cHkqifez1a3ZcVHR+J8LmHWYe+VUy96aeiCssCiBA6vE0i
-HJa3pLsaxPlCoberaRH4yz8mnppi37GtMay0zZ0fu6jrjA3p7nGtJKpOknPD9UAK
-g/pjn3mPZmMuRF6jTVliFGFBlN8ScxMPU67DJcdmUaOaKEjF+N0oj3Fbmx52lv7W
-rvGradokdMKbFY8IHuYwq6ofcXnvN/nHnlQdhW9lGgDzxfxiTZc78bMZWQmFXYwr
-I6ZGr5OvMxMya6ru7ZVXdHeqXYPcS2mBJ4j86HOXJYn44qvdTmCQ9DY44UeIAAN9
-RV9KtpzzQU3X0aH4Qc9mUTU1a57DtY8YwEtThlDUPdOYhh33xF/LoLKKwHkfz9om
-kLGITHaa7sATBJeQU9fFyMOo6ygyDYwEjoS0fjzVlfC/NdGZw6bFPXhsTdnc6Ycn
-XVXexU1P8BKMSoqcv+qkLLr8DWHrhs/5VFiHtODjp0suSxbyckQYlQi+NMFxeV28
-s4YAJar3CDsbu6+Ajvv78rOz5quICOuyNTLs/awpdFHjG6CLcyDJiex5RORP2RS8
-yNtM8rKNXaC7Xx/CaSqlB5/t5/6okzUIrURL1jE46/wXqq0Wzi2CnNABnRyu90q5
-HNG/kYx3KVzuRSWNk934kEQku5MW0mJKc6Q33oyPd8NNIGO7dGU=
-=K3Cb
+iQIzBAEBCgAdFiEEMPG2F/LEdGDO66zdnEx1XZjB26sFAmpM8+4ACgkQnEx1XZjB
+26uffw//aqm0y0czL9TtInTfL/iwZ6ANj4Cu40M+5pABDNQ0RGx3BIVKfm+LWpY/
+p4/LRqE6B78zXN1jyqUTriFEUBXCyd9Tk2aoC8yAkj/55CuUOlTss4YKz1OKZsfR
+yqfOU0OUM+AoOX7ntY8W6pxozAR5kvNQHKa+UuGMlWQc1Dd+dirJhNAkLuswOF4g
+xVuurNs8blr+eEEGs752kFWXXTPrVriq6WeylmOq61Rx+2Wwf8sVZqIjBjCfxlie
+8aiXew47LRYBDMIh7/RtEyX2rT4eraVFmtWcSy32Zdfi4dYoOmYPN1zaG/0t5r/1
+/VKLUzLQDljYYdZXV4upa7SwGx0ELrXTcsXYO0SPw60h5mON+8rlWwmsfgBd7snx
+wJtJdY1mfy4ep3jxN7SA6Jcf6tYOCNeWhAUM4tv/9yBkR2hq3ee5u7sACq0079Vl
+Ull2xcAFAnYlXgf7c9wcL46GrT6Y+Y0bkIBzMW/tyt0H9p51HDbCmn29oSPcRJtW
+zHcwA97kSr13QRKVD0OW908d9hQ6TYt5ZZ02jCtLBhhQSlzc5zMX9ytSb7Y82/MP
+J8QTGCHzVHGGF9sxP0X+v6ld61teaohnFTr1cTmBJWouRTk1u9//bAr1snW3Mx7g
+sVZuWnX7RlNPpFQpkGCb7wUP5vNnyV7gRjFXX2x0Ix9gzNl4B5M=
+=Mex+
 -----END PGP SIGNATURE-----

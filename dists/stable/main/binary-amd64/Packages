@@ -1,43 +1,43 @@
 Package: crw
-Version: 0.21.0
+Version: 0.21.1
 Architecture: amd64
 Maintainer: CRW <crw@fastcrw.com>
-Installed-Size: 28728
-Filename: pool/crw_0.21.0_amd64.deb
-Size: 9086950
-MD5sum: 5a05909e1bc545df655a9ef90a180417
-SHA1: 4df430fbd20a0a343fb10df015751a3f16c2a4ea
-SHA256: cc0dba29a1d0b08bd8e2ba732a931e756ff2148d3e4200bed66d3f84d2185e0a
+Installed-Size: 28732
+Filename: pool/crw_0.21.1_amd64.deb
+Size: 9087378
+MD5sum: 18100254a1808dbb89078eeb439e55c7
+SHA1: dea28566da6142c8c483a22f089efa4522349437
+SHA256: 938af5432757de4b24807630f2e04ab39de2f5e55980c05b2b527af040f31809
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
 Description: Fast web scraper CLI for AI agents. Markdown output, zero config.
 
 Package: crw-mcp
-Version: 0.21.0
+Version: 0.21.1
 Architecture: amd64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 21928
-Filename: pool/crw-mcp_0.21.0_amd64.deb
-Size: 7141172
-MD5sum: bbc049a34f86f5628669971ce5a4d7b8
-SHA1: da7c5af3f3fcaff40ecb03caea50ad8030fb140d
-SHA256: 3ffc37c523cd7fd69e58ce2b7b092a21ac28c682d4545122ae1753b4907bcbf9
+Filename: pool/crw-mcp_0.21.1_amd64.deb
+Size: 7139946
+MD5sum: e3516b818d7a7ebd29dd58f53829682a
+SHA1: 7e7e0f8af947b9f5cf162c815ce65c412394ce35
+SHA256: 31a187deaf70d875ff2be53284c6f193cc36714939512cc768e13d54a068b4bb
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
 Description: MCP server for web scraping — works with Claude, Cursor, etc.
 
 Package: crw-server
-Version: 0.21.0
+Version: 0.21.1
 Architecture: amd64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 23816
-Filename: pool/crw-server_0.21.0_amd64.deb
-Size: 7738806
-MD5sum: 341986c6b7298a75dbdc9ff138372efc
-SHA1: 56f993d080cf7d1057de8295de0dd20053f830ee
-SHA256: 0a8deb61061bfffd719018ad6e340d7c71687fb8cee6d5052ecde28c0afa498b
+Filename: pool/crw-server_0.21.1_amd64.deb
+Size: 7735402
+MD5sum: 2f4052b8253b663f42c4c7a9371263c9
+SHA1: f30022901962056c149e63bfc9a481f61ea90af7
+SHA256: ed4d44b28856f60ea8bdbcd1bc46c2595eb748373b7b3466fb3c20dc639a0556
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
