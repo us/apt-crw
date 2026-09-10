@@ -4,10 +4,10 @@ Architecture: arm64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 25780
 Filename: pool/crw_0.34.0_arm64.deb
-Size: 9046524
-MD5sum: 26d863bd12b196f969829d119a4cd27b
-SHA1: abd5687c5a68dacc373b298b6044a49bbf9c0fa6
-SHA256: 52368b25b83352f6053cac52dc8a2d72311fa06b4d416f86a5e79694e2297fe0
+Size: 9046516
+MD5sum: 11f54322ba4f1ba2b71e75b5e74c889c
+SHA1: 6492ec2ad71b734bc155073cf078389c7e422e92
+SHA256: a72f3e5196bcf6f59aece375611f019940d52a73c444d439d843acffcb256f8b
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
@@ -19,10 +19,10 @@ Architecture: arm64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 19372
 Filename: pool/crw-mcp_0.34.0_arm64.deb
-Size: 7031682
-MD5sum: cfe6ed39b64a6f7e99040eef4c0b6f7f
-SHA1: 51d5f3c10a9c6c239e399bced01393e7a9bbd3f2
-SHA256: 05b594b9594a258f32963eead7b18047f8aec80b62b830a1b7630ad1fae78770
+Size: 7031680
+MD5sum: 6f4968fc0e0de61b5a3dd9320cf1414d
+SHA1: a12abac41ba44c067c45807eba5d26cd99aff05f
+SHA256: e5779e332fee2cb137bc77928666d0f472b3e267ed98280017cca455263df703
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
@@ -34,10 +34,10 @@ Architecture: arm64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 21200
 Filename: pool/crw-server_0.34.0_arm64.deb
-Size: 7694092
-MD5sum: a46be9be97e411e905591f52faba6dd7
-SHA1: 5fe7fdc9c50006f611edd97bb7e0542434de616e
-SHA256: a5c4fe73ad177f101a46ac71bf0a80414c80ae99bb989362c3d36fddecdc4d46
+Size: 7694126
+MD5sum: ea421c98e69fbd36e422a09f3f8fd0a9
+SHA1: d6cd196c2ef00b84cc6cc70c6397ec4f7c3783ae
+SHA256: 4e854530d522637774b3211b6f6984effaa63eca6c0b91d1d2b000e6b4c1afc0
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
