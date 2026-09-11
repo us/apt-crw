@@ -1,43 +1,43 @@
 Package: crw
-Version: 0.35.0
+Version: 0.35.1
 Architecture: amd64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 31908
-Filename: pool/crw_0.35.0_amd64.deb
-Size: 10060458
-MD5sum: 265bc993095f80268c9df3e90bbec30a
-SHA1: 288e543d964ce77c52cd71f766d4212b2ca354a5
-SHA256: 0a279ad3b8d866c7454911caa05daf9dd123a813cdcce3ba82c94fe2a03f6504
+Filename: pool/crw_0.35.1_amd64.deb
+Size: 10066836
+MD5sum: 0113e1aedcc6a23e96b139d7f6e3d369
+SHA1: 41b0692f5ffdc3708927f2a7b38cbed1dfb3269f
+SHA256: f07b072c2966eb6633206dc1f6ecad4e72234a10dbf9010969a8d1f90c0d0e2d
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
 Description: Fast web scraper CLI for AI agents. Markdown output, zero config.
 
 Package: crw-mcp
-Version: 0.35.0
+Version: 0.35.1
 Architecture: amd64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 24348
-Filename: pool/crw-mcp_0.35.0_amd64.deb
-Size: 7868874
-MD5sum: 47f2d7b57697dabfc9af147dc9e663b0
-SHA1: 60438b0a1427971fe9f8fc90af0a83a761f1de46
-SHA256: 407c32a3980cdadbac37a0697259d28ea3090fd536420a511716627e44f07a33
+Filename: pool/crw-mcp_0.35.1_amd64.deb
+Size: 7866614
+MD5sum: 105451ea934349ad21f6a26c34888785
+SHA1: 3d16666ccf901585010cb01ddadbb432fb3c312e
+SHA256: 3459a51ed228b9831ece230987c09f2d07c523483bd291b3e497c8795ece8ac7
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
 Description: MCP server for web scraping — works with Claude, Cursor, etc.
 
 Package: crw-server
-Version: 0.35.0
+Version: 0.35.1
 Architecture: amd64
 Maintainer: CRW <crw@fastcrw.com>
 Installed-Size: 26500
-Filename: pool/crw-server_0.35.0_amd64.deb
-Size: 8558638
-MD5sum: 1d2c8c96eda7e1cdf218399998868597
-SHA1: 3d80e67314021a198d312afa14c9f4ce86fbaa27
-SHA256: fb37ced3fac4005584c12bac0299f8c3552c07113b81ad41ec6fe00dcbdfca7e
+Filename: pool/crw-server_0.35.1_amd64.deb
+Size: 8558542
+MD5sum: 849b0a03c753ed6f5062d15752f100d5
+SHA1: f649587e90cbb5c1d740119e571dac8342445a11
+SHA256: f81b679b1ade547d53071fcc5c3c28c4cc9ab2a099ff77258c4978cdd4f355c6
 Section: web
 Priority: optional
 Homepage: https://github.com/us/crw
