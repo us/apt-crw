@@ -1,6 +1,6 @@
 # CRW APT Repository
 
-Debian/Ubuntu package repository for [CRW](https://github.com/us/crw) — the web scraper built for AI agents.
+Debian/Ubuntu package repository for [CRW](https://github.com/fastcrw/crw) — the web scraper built for AI agents.
 
 ## Usage
 

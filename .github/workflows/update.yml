@@ -37,7 +37,7 @@ jobs:
           for bin in crw crw-server crw-mcp; do
             for arch in x64 arm64; do
               echo "Downloading ${bin}-linux-${arch}.tar.gz..."
-              gh release download "v${VERSION}" --repo us/crw \
+              gh release download "v${VERSION}" --repo fastcrw/crw \
                 -D /tmp/assets -p "${bin}-linux-${arch}.tar.gz" --clobber
             done
           done
@@ -66,7 +66,7 @@ jobs:
           Architecture: ${deb_arch}
           Installed-Size: $(du -sk "${pkg_dir}/usr/bin/${bin}" | cut -f1)
           Maintainer: CRW <crw@fastcrw.com>
-          Homepage: https://github.com/us/crw
+          Homepage: https://github.com/fastcrw/crw
           Description: ${desc}
           CTRL
 
